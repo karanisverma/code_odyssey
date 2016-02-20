@@ -1,0 +1,40 @@
+{
+    "kv_regex": {
+        "mobil": {
+          "Network":["","(\\d{1})g ","G: Yes"],
+          "Display Size":["Size: ","(\\d+(\\.\\d+)?)\\s*inch"," Inch"],
+          "Expandable Memory":["Sizes: ","(\\d+)\\s*(gb|gigabytes)\\s*[s,m,e]"," Gb"],
+          "Memory Ram": [["Ram Size Gb: ","Ram : ", "Ram: ", "Ram Memory: ","Ram: ", "Memory: "],"(\\d{1,2})+(\\s*gb|\\s*gigabytes)+(\\s*ram)|(ram\\s*)+(\\d{1,2})+(\\s*gb|\\s*gigabytes)",[" Gb","Gb"," Gb Ram"," Gb Ram, 8 Gb Rom", " Gb Ram, 16 Gb Rom", " Gb Ram, 32 Gb Rom"," gb"],"True"],
+          "Camera" : [["Rear Camera Resolution: ", "Front Camera: ","Front camera : ","Rear camera : ", "Rear Camera: Yes, ", "Front Camera Resolution: ", "Primary Camera: "],"(\\d+)\\s*(mp|Megapixel)",[" Megapixels"," Mp"," mp"],"True"]
+        },
+        "tablet": {
+          "Network":["","(\\d{1})g ","G: Yes"],
+          "Display Size":["Size: ","(\\d+(\\.\\d+)?)\\s*inch"," Inch"],
+          "Expandable Memory":["Sizes: ","(\\d+)\\s*(gb|gigabytes)\\s*[s,m,e]"," Gb"],
+          "Memory Ram": [["Ram Size Gb: ", "Ram: ", "Ram Memory: ","Ram: ", "Memory: "],"(\\d{1,2})+(\\s*gb|\\s*gigabytes)+(\\s*ram)|(ram\\s*)+(\\d{1,2})+(\\s*gb|\\s*gigabytes)",[" Gb","Gb"," Gb Ram"," Gb Ram, 8 Gb Rom", " Gb Ram, 16 Gb Rom", " Gb Ram, 32 Gb Rom"],"True"],
+          "Camera" : [["Rear Camera Resolution: ", "Rear Camera: Yes, ", "Front Camera Resolution: ", "Primary Camera: "],"(\\d+)\\s*(mp|Megapixel)",[" Megapixels"," Mp"],"True"]
+        },
+        "mobil & tablet": {
+          "Network":["","(\\d{1})g ","G: Yes"],
+          "Display Size":["Size: ","(\\d+(\\.\\d+)?)\\s*inch"," Inch"],
+          "Expandable Memory":["Sizes: ","(\\d+)\\s*(gb|gigabytes)\\s*[s,m,e]"," Gb"],
+          "Memory Ram": [["Ram Size Gb: ", "Ram: ", "Ram Memory: ","Ram: ", "Memory: "],"(\\d{1,2})+(\\s*gb|\\s*gigabytes)+(\\s*ram)|(ram\\s*)+(\\d{1,2})+(\\s*gb|\\s*gigabytes)",[" Gb","Gb"," Gb Ram"," Gb Ram, 8 Gb Rom", " Gb Ram, 16 Gb Rom", " Gb Ram, 32 Gb Rom"],"True"],
+          "Camera" : [["Rear Camera Resolution: ", "Rear Camera: Yes, ", "Front Camera Resolution: ", "Primary Camera: "],"(\\d+)\\s*(mp|Megapixel)",[" Megapixels"," Mp"],"True"]
+        },
+        "laptop": {
+            "Hard Disk Capacity": ["Hard Disk Capacity: ","(\\d{3})+(\\s*gb|\\s*gigabytes)|(\\d+)(\\s*tb|\\s*terabytes)",[" Gb"," Tb"]],
+            "Architecture": ["Architecture: ","(\\d{2})\\s*bit"," Bit"],
+            "Operating System":["Operating System: ","((windows\\s*\\d.\\d)|(windows\\s*\\d+)|(dos)|(linux))",""],
+            "Resolution":[["Resolution: ", "Screen Resolution: "],"((\\d+)\\s*x\\s*(\\d+))",[" Pixels", ""],"True"],
+            "Memory Ram": [["Ram: ", "Ram Size: ", "Memory Ram: "],"(\\d{1,2})+(\\s*gb|\\s*gigabytes)+(\\s*ram)|(ram\\s*)+(\\d{1,2})+(\\s*gb|\\s*gigabytes)",[" Gb", " Gb Ddr3"],"True"]
+        },
+        "desktop": {
+            "Hard Disk Capacity": ["Hard Disk Capacity: ","(\\d{3})+(\\s*gb|\\s*gigabytes)|(\\d+)(\\s*tb|\\s*terabytes)",[" Gb"," Tb"]],
+            "Architecture": ["Architecture: ","(\\d{2})\\s*bit"," Bit"],
+            "Operating System":["Operating System: ","((windows\\s*\\d.\\d)|(windows\\s*\\d+)|(dos)|(linux))",""],
+            "Resolution":["Resolution: ","((\\d+)\\s*x\\s*(\\d+))"," Pixels"],
+            "Memory Ram": ["Memory Ram: ","(\\d{1,2})+(\\s*gb|\\s*gigabytes)+(\\s*ram)|(ram\\s*)+(\\d{1,2})+(\\s*gb|\\s*gigabytes)"," Gb"]
+        }
+
+    }   
+}
